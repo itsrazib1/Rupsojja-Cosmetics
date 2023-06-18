@@ -67,7 +67,7 @@ const AdminHome = () => {
                     </div>
                     <div className="stat-title">Revenue</div>
                     <div className="stat-value">${stats.revenue}</div>
-                    <div className="stat-desc">Jan 1st - Feb 1st</div>
+                    {/* <div className="stat-desc">Jan 1st - Feb 1st</div> */}
                 </div>
 
                 <div className="stat">

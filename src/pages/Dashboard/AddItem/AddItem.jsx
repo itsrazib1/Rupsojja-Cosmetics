@@ -48,13 +48,13 @@ const AddItem = () => {
     
     return (
         <div className="w-full px-10">
-            <SectionTitle subHeading="What's new" heading="Add an item" ></SectionTitle>
+            <SectionTitle subHeading="Add new" heading="Add an item" ></SectionTitle>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">
                     <label className="label">
-                        <span className="label-text font-semibold">Recipe Name*</span>
+                        <span className="label-text font-semibold">Product Name*</span>
                     </label>
-                    <input type="text" placeholder="Recipe Name"
+                    <input type="text" placeholder="Product Name"
                         {...register("name", { required: true, maxLength: 120 })}
                         className="input input-bordered w-full " />
                 </div>
@@ -65,12 +65,12 @@ const AddItem = () => {
                         </label>
                         <select defaultValue="Pick One" {...register("category", { required: true })} className="select select-bordered">
                             <option disabled>Pick One</option>
-                            <option>Pizza</option>
-                            <option>Soup</option>
-                            <option>Salad</option>
-                            <option>Dessert</option>
-                            <option>Desi</option>
-                            <option>Drinks</option>
+                            <option>KidsZone</option>
+                            <option>Makeup</option>
+                            <option>soap</option>
+                            <option>cream</option>
+                            <option>Parfum</option>
+                            <option>other</option>
                         </select>
                     </div>
                     <div className="form-control w-full ml-4">
@@ -82,9 +82,9 @@ const AddItem = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Recipe Details</span>
+                        <span className="label-text">Product Details</span>
                     </label>
-                    <textarea {...register("recipe", { required: true })} className="textarea textarea-bordered h-24" placeholder="Bio"></textarea>
+                    <textarea {...register("recipe", { required: true })} className="textarea textarea-bordered h-24" placeholder="Product Details"></textarea>
                 </div>
                 <div className="form-control w-full my-4">
                     <label className="label">
@@ -92,7 +92,7 @@ const AddItem = () => {
                     </label>
                     <input type="file" {...register("image", { required: true })} className="file-input file-input-bordered w-full " />
                 </div>
-                <input className="btn btn-sm mt-4" type="submit" value="Add Item" />
+                <input className="btn btn-accent btn-sm mt-4 btn-block" type="submit" value="Add Item" />
             </form>
         </div>
     );

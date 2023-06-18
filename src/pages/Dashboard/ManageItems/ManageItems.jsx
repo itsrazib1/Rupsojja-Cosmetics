@@ -1,7 +1,8 @@
 import { FaTrashAlt } from "react-icons/fa";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useMenu from "../../../hooks/useMenu";
-import Swal from "sweetalert2";
+
+import Swal from 'sweetalert2';
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 
@@ -18,7 +19,7 @@ const ManageItems = () => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
+          }).then((result) => {
             if (result.isConfirmed) {
 
                 axiosSecure.delete(`/menu/${item._id}`)
