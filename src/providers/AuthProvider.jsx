@@ -1,7 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
-import { app } from "../firebase/firebase.config";
+
 import axios from "axios";
+import { app } from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 
@@ -46,7 +47,7 @@ const AuthProvider = ({ children }) => {
 
             // get and set token
             if(currentUser){
-                axios.post('https://rupsojja-cosmatic-server-deployment.vercel.app/jwt', {email: currentUser.email})
+                axios.post('https://rupsojja-cosmatic-server-deployment-xoxorazibahamed-gmailcom.vercel.app/jwt', {email: currentUser.email})
                 .then(data =>{
                     // console.log(data.data.token)
                     localStorage.setItem('access-token', data.data.token)

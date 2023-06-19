@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import useAuth from './useAuth';
 
 const axiosSecure = axios.create({
-  baseURL: 'https://rupsojja-cosmatic-server-deployment.vercel.app/', 
+  baseURL: 'https://rupsojja-cosmatic-server-deployment-xoxorazibahamed-gmailcom.vercel.app/', 
 });
 
 const useAxiosSecure = () => {

@@ -14,7 +14,7 @@ const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('https://rupsojja-cosmatic-server-deployment.vercel.app/reviews')
+        fetch('https://rupsojja-cosmatic-server-deployment-xoxorazibahamed-gmailcom.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

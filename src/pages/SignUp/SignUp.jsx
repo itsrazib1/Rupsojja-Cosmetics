@@ -40,7 +40,7 @@ const SignUp = () => {
       await updateUserProfile(data.name, photoURL);
   
       const saveUser = { name: data.name, email: data.email };
-      const saveResponse = await fetch("https://rupsojja-cosmatic-server-deployment.vercel.app/users", {
+      const saveResponse = await fetch("https://rupsojja-cosmatic-server-deployment-xoxorazibahamed-gmailcom.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
