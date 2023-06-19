@@ -40,7 +40,7 @@ const SignUp = () => {
       await updateUserProfile(data.name, photoURL);
   
       const saveUser = { name: data.name, email: data.email };
-      const saveResponse = await fetch("http://localhost:5000/users", {
+      const saveResponse = await fetch("https://rupsojja-cosmatic-server-deployment.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -69,13 +69,13 @@ const SignUp = () => {
   return (
     <>
       <Helmet>
-        <title>Rupsojja Cosmetics | Sign Up</title>
+        <title>Bistro Boss | Sign Up</title>
       </Helmet>
       <div className="hero min-h-screen bg-base-200  ">
         <div className="hero-content flex-col lg:flex-row-reverse ">
         <div className="text-center lg:text-left">
             <img
-              className="w-[400px]"
+              className="w-[300px]"
               src="https://media.istockphoto.com/id/1135350680/vector/register-now-sign-trendy-web-interface-or-app-button-vector-illustration.jpg?s=612x612&w=0&k=20&c=Edb4S_lJt8HgJ_Y09Yq7pyVXCRJaIEnTJ4p-sRnfOwg="
               alt=""
             />
@@ -86,7 +86,7 @@ const SignUp = () => {
             </p> */}
           </div>
           <div className="card flex-shrink-0 max-w-sm shadow-2xl bg-base-100">
-            <div className="card-body">
+            <div className="card-body ">
               <form onSubmit={handleSubmit(onSubmit)} className="w-full -mt-5">
                 <div>
                   <label

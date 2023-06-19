@@ -41,55 +41,60 @@ const ManageItems = () => {
 
     return (
         <div className="w-full">
-            <SectionTitle heading="Manage All Items" subHeading="Hurry up"></SectionTitle>
-            <div className="overflow-x-auto w-full">
-                <table className="table w-full">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Item</th>
-                            <th>Category</th>
-                            <th>Price</th>
-                            <th>Update</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            menu.map((item, index) => <tr key={item._id}>
-                                <td>
-                                    {index + 1}
-                                </td>
-                                <td>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="avatar">
-                                            <div className="mask mask-squircle w-12 h-12">
-                                                <img src={item.image} alt="Avatar Tailwind CSS Component" />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="font-bold">{item.name}</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    {item.category}
-                                </td>
-                                <td className="text-right">${item.price}</td>
-                                <td>
-                                    <button className="btn btn-ghost btn-xs">details</button>
-                                </td>
-                                <td>
-                                    <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
-                                </td>
-                            </tr>)
-                        }
+  <SectionTitle heading="Manage All Items" subHeading="Hurry up"></SectionTitle>
+  <div className="overflow-x-auto w-full">
+    <div className="inline-block min-w-full">
+      <table className="min-w-full">
+        {/* head */}
+        <thead>
+          <tr>
+            <th className="py-2">#</th>
+            <th className="py-2">Item</th>
+            <th className="py-2">Category</th>
+            <th className="py-2">Price</th>
+            <th className="py-2">Update</th>
+            <th className="py-2">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {menu.map((item, index) => (
+            <tr key={item._id}>
+              <td className="py-2">{index + 1}</td>
+              <td className="py-2">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12">
+                    <img
+                      className="object-cover w-full h-full rounded-full"
+                      src={item.image}
+                      alt="Avatar Tailwind CSS Component"
+                    />
+                  </div>
+                  <div>
+                    <div className="font-bold text-xs">{item.name}</div>
+                  </div>
+                </div>
+              </td>
+              <td className="py-2">{item.category}</td>
+              <td className="py-2 text-right">${item.price}</td>
+              <td className="py-2">
+                <button className="btn btn-ghost btn-xs">details</button>
+              </td>
+              <td className="py-2">
+                <button
+                  onClick={() => handleDelete(item)}
+                  className="btn btn-ghost bg-red-600 text-white"
+                >
+                  <FaTrashAlt></FaTrashAlt>
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
     );
 };
 

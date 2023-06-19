@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import orderCoverImg from '../../../assets/shop/order.jpg'
+import orderCoverImg from '../../../assets/home/Untitled-2.jpg'
 import Cover from '../../Shared/Cover/Cover';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -9,7 +9,7 @@ import { useParams } from 'react-router';
 import { Helmet } from 'react-helmet-async';
 
 const Order = () => {
-    const categories = ['salad', 'pizza', 'soap', 'dessert', 'drinks'];
+    const categories = ['KidsZone', 'Makeup', 'soap', 'cream', 'Parfum','other','popular'];
     const { category } = useParams();
     const initialIndex = categories.indexOf(category);
     const [tabIndex, setTabIndex] = useState(initialIndex);
@@ -21,13 +21,14 @@ const Order = () => {
     const cream = menu.filter(item => item.category === 'cream');
     const Parfum = menu.filter(item => item.category === 'Parfum');
     const other = menu.filter(item => item.category === 'other');
+    const popular = menu.filter(item => item.category === 'popular');
 
     return (
         <div>
             <Helmet>
                 <title>Rupsojja Cosmetics | Order Product</title>
             </Helmet>
-            <Cover img={orderCoverImg} title="Order Food"></Cover>
+            <Cover img={orderCoverImg} title="Order Product"></Cover>
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
                     <Tab>Kids Zone</Tab>
@@ -36,6 +37,7 @@ const Order = () => {
                     <Tab>cream</Tab>
                     <Tab>Parfum</Tab>
                     <Tab>Other</Tab>
+                    <Tab>popular</Tab>
                 </TabList>
                 <TabPanel>
                     <OrderTab items={KidsZone}></OrderTab>
@@ -54,6 +56,9 @@ const Order = () => {
                 </TabPanel>
                 <TabPanel>
                     <OrderTab items={other}></OrderTab>
+                </TabPanel>
+                <TabPanel>
+                    <OrderTab items={popular}></OrderTab>
                 </TabPanel>
             </Tabs>
         </div>

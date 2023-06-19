@@ -71,6 +71,7 @@ const AddItem = () => {
                             <option>cream</option>
                             <option>Parfum</option>
                             <option>other</option>
+                            <option>popular</option>
                         </select>
                     </div>
                     <div className="form-control w-full ml-4">

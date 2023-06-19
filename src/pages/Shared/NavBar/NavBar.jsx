@@ -46,7 +46,7 @@ const NavBar = () => {
         <>
             <div className="navbar fixed z-10 bg-opacity-25 max-w-screen-xl bg-gray-400 md:text-white sm:text-black">
                 <div className="navbar-start">
-                    <div className="dropdown -mt-5">
+                    <div className="dropdown text-black -mt-5">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
@@ -54,7 +54,7 @@ const NavBar = () => {
                             {navOptions}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-white  text-xl">Rupsojja Cosmetics</a>
+                    <a className="btn sm:text-sm md:text-xl  btn-ghost normal-case text-white  ">Rupsojja Cosmetics</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

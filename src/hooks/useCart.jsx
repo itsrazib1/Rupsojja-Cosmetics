@@ -21,7 +21,7 @@ const useCart = () => {
 export default useCart;
 
 // queryFn: async () => {
-        //     const res = await fetch(`http://localhost:5000/carts?email=${user?.email}`, { headers: {
+        //     const res = await fetch(`https://rupsojja-cosmatic-server-deployment.vercel.app/carts?email=${user?.email}`, { headers: {
         //         authorization: `bearer ${token}`
         //     }})
         //     return res.json();

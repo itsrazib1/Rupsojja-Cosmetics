@@ -13,7 +13,7 @@ const AllUsers = () => {
     })
 
     const handleMakeAdmin = user =>{
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        fetch(`https://rupsojja-cosmatic-server-deployment.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
